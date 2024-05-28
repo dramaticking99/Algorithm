@@ -1,0 +1,29 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/chetansanwariya/Desktop/Algo/1_DivideAndConquer/a_Sorting/1_HeapSort/code'
+relocations:
+  - { offsetInCU: 0x100, offset: 0x100, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap9heapifyUpEPim, symObjAddr: 0x0, symBinAddr: 0x1000037AC, symSize: 0x100 }
+  - { offsetInCU: 0x108, offset: 0x108, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x610, symBinAddr: 0x100003E44, symSize: 0x0 }
+  - { offsetInCU: 0x3206, offset: 0x3206, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0xF338, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x3618, offset: 0x3618, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x610, symBinAddr: 0x100003E44, symSize: 0x0 }
+  - { offsetInCU: 0x3632, offset: 0x3632, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedImEE, symObjAddr: 0x611, symBinAddr: 0x100003E45, symSize: 0x0 }
+  - { offsetInCU: 0x364C, offset: 0x364C, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIyEE, symObjAddr: 0x612, symBinAddr: 0x100003E46, symSize: 0x0 }
+  - { offsetInCU: 0x3672, offset: 0x3672, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_code.cpp, symObjAddr: 0x5FC, symBinAddr: 0x100003DA8, symSize: 0x14 }
+  - { offsetInCU: 0x367A, offset: 0x367A, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x610, symBinAddr: 0x100003E44, symSize: 0x0 }
+  - { offsetInCU: 0x369E, offset: 0x369E, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x5C0, symBinAddr: 0x100003D6C, symSize: 0x3C }
+  - { offsetInCU: 0x36A6, offset: 0x36A6, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_code.cpp, symObjAddr: 0x5FC, symBinAddr: 0x100003DA8, symSize: 0x14 }
+  - { offsetInCU: 0x369A, offset: 0x369A, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x50C, symBinAddr: 0x100003CB8, symSize: 0xB4 }
+  - { offsetInCU: 0x36A2, offset: 0x36A2, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x5C0, symBinAddr: 0x100003D6C, symSize: 0x3C }
+  - { offsetInCU: 0x3717, offset: 0x3717, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap8heapSortEPim, symObjAddr: 0x4D8, symBinAddr: 0x100003C84, symSize: 0x34 }
+  - { offsetInCU: 0x371F, offset: 0x371F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x50C, symBinAddr: 0x100003CB8, symSize: 0xB4 }
+  - { offsetInCU: 0x375B, offset: 0x375B, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap10deleteHeapEPim, symObjAddr: 0x45C, symBinAddr: 0x100003C08, symSize: 0x7C }
+  - { offsetInCU: 0x3763, offset: 0x3763, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap8heapSortEPim, symObjAddr: 0x4D8, symBinAddr: 0x100003C84, symSize: 0x34 }
+  - { offsetInCU: 0x37FC, offset: 0x37FC, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap10createHeapEPim, symObjAddr: 0x3FC, symBinAddr: 0x100003BA8, symSize: 0x60 }
+  - { offsetInCU: 0x3804, offset: 0x3804, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap10deleteHeapEPim, symObjAddr: 0x45C, symBinAddr: 0x100003C08, symSize: 0x7C }
+  - { offsetInCU: 0x388A, offset: 0x388A, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap10deleteItemEPim, symObjAddr: 0x3A0, symBinAddr: 0x100003B4C, symSize: 0x5C }
+  - { offsetInCU: 0x3892, offset: 0x3892, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap10createHeapEPim, symObjAddr: 0x3FC, symBinAddr: 0x100003BA8, symSize: 0x60 }
+  - { offsetInCU: 0x38E1, offset: 0x38E1, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap11heapifyDownEPim, symObjAddr: 0x100, symBinAddr: 0x1000038AC, symSize: 0x2A0 }
+  - { offsetInCU: 0x38E9, offset: 0x38E9, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap10deleteItemEPim, symObjAddr: 0x3A0, symBinAddr: 0x100003B4C, symSize: 0x5C }
+  - { offsetInCU: 0x39BC, offset: 0x39BC, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap9heapifyUpEPim, symObjAddr: 0x0, symBinAddr: 0x1000037AC, symSize: 0x100 }
+  - { offsetInCU: 0x39C4, offset: 0x39C4, size: 0x8, addend: 0x0, symName: __ZN7MaxHeap11heapifyDownEPim, symObjAddr: 0x100, symBinAddr: 0x1000038AC, symSize: 0x2A0 }
+...
