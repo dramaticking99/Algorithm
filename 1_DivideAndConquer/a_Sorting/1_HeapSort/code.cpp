@@ -1,33 +1,46 @@
 #include<iostream>
 #include<cstddef>
+#include<string>
+#include<vector>
+#include<algorithm>
 using namespace std;
+
+//Task today is to define a MaxHeap in the class Itself.
+// and change the functions in such a way that they make changes to the maxHeap defined in the class
+// Also create a class that implements the heap with recurrsion
 
 class MaxHeap {
 
+private:
+
+    vector<int>heap;
+    
 public:    
-    static void heapifyUp (int* arr, size_t size) {
-        int index = size;
+    
+    MaxHeap(vector<int>heapVector) {
+        this->heap = heapVector;
+    }
+    
+    void heapifyUp () {
+        int index = heap.size();
         int parentIndex = index/2;
 
-        while(parentIndex >= 1 && arr[parentIndex - 1] < arr[index - 1]) {
-            int temp = arr[parentIndex - 1];
-            arr[parentIndex - 1] = arr[index - 1];
-            arr[index - 1] = temp;
-
+        while(parentIndex >= 1 && heap[parentIndex - 1] < heap[index - 1]) {
+            swap(heap[parentIndex - 1], heap[index - 1]);
             index = parentIndex;
             parentIndex = index/2;
         }
     }
 
-    static void heapifyDown (int* arr, size_t size) {
+    void heapifyDown () {
         int index = 1;
+        int size = heap.size();
         int leftChild = index*2 > size ? -1 : index*2;
         int rightChild = index*2 + 1 > size ? -1 : index*2 + 1;
-
         int greaterChild = -1;
 
         if (leftChild != -1 && rightChild != -1) {
-            if (arr[leftChild - 1] > arr[rightChild - 1]) {
+            if (heap[leftChild - 1] > heap[rightChild - 1]) {
                greaterChild = leftChild;
             } else {
                greaterChild = rightChild;
@@ -36,67 +49,87 @@ public:
             greaterChild = leftChild;
         }
 
-        while (greaterChild != -1 && arr[index - 1] < arr[greaterChild - 1]){
-            int temp = arr[index - 1];
-            arr[index - 1] = arr[greaterChild - 1];
-            arr[greaterChild - 1] = temp;
-
+        while (greaterChild != -1 && heap[index - 1] < heap[greaterChild - 1]){
+            swap(heap[index - 1], heap[greaterChild - 1]);
             index = greaterChild;
             greaterChild = -1;
-
             int leftChild = index*2 > size ? -1 : index*2;
             int rightChild = index*2 + 1 > size ? -1 : index*2 + 1;
 
             if (leftChild != -1 && rightChild != -1) {
-              if (arr[leftChild - 1] > arr[rightChild - 1]) {
+              if (heap[leftChild - 1] > heap[rightChild - 1]) {
                  greaterChild = leftChild;
               } else {
                  greaterChild = rightChild;
               }
-            }  else if( leftChild != -1) {
-            greaterChild = leftChild;
-        }
+            } else if( leftChild != -1) {
+                   greaterChild = leftChild;
+                }
         }
     }
 
-    static void insertItem (int* arr, size_t size, int item) {
-        arr[size] = item;
-        heapifyUp(arr,size+1);
+    void insertItem (int item) {
+        heap[heap.size()] = item;
+        heapifyUp();
     }
 
-    static int deleteItem (int* arr, size_t size) {
-        int item = arr[0];
-        arr[0] = arr[size - 1];
-        heapifyDown(arr, size - 1);
+    int deleteItem () {
+        int item = heap[0];
+        heap[0] = heap[heap.size() - 1];
+        heapifyDown();
         return item;
     }
 
-    static void createHeap(int* arr, size_t size) {
-        for(int i = 1; i <= size; i++) {
-            int tempSize = i;
-            heapifyUp(arr,tempSize);
+    void createHeap() {
+        for(int i = 1; i <= heap.size(); i++) {
+            heapifyUp();
         }
     }
 
-    static void deleteHeap(int* arr, size_t size) {
-        for( int i = size; i >= 1; i--) {
+    void deleteHeap() {
+        for( int i = heap.size(); i >= 1; i--) {
             int tempSize = i;
-            int item = deleteItem(arr,tempSize);
-            arr[tempSize - 1] = item;
+            int item = deleteItem();
+            heap[tempSize - 1] = item;
         }
     }
 
-    static void heapSort(int* arr, size_t size) {
-        createHeap(arr,size);
-        deleteHeap(arr,size);
+    static void heapSort(vector<int>& arr) {
+        MaxHeap* heap = new MaxHeap(arr);
+        heap->createHeap();
+        heap->deleteHeap();
+        arr = heap->getHeap();
+        delete heap;
+    }
+
+    int getSize() {
+        return heap.size();
+    }
+
+    vector<int> getHeap() {
+        return heap;
+    }
+
+    void printHeap() {
+        cout<<"the elements in the heap are as follows : ";
+        for(int i = 0; i < heap.size(); i++){
+            cout<<heap[i]<<" ";
+        }
+        cout<<endl;
     }
 };
 
 int main() {
-    int arr[100] = {6,3,4,1,10};
-    int size = 5;
-    MaxHeap::heapSort(arr,size);
-    for(int i = 0; i < size; i++) {
-        cout<<arr[i]<<endl;
+
+    vector<int>arr = {6,3,4,1,10};
+
+    MaxHeap::heapSort(arr);
+
+    cout<<"This should be the sorted array : ";
+    for(int i = 0; i < arr.size(); i++){
+        cout<<arr[i]<<" ";
     }
+    cout<<endl;
+    
 }
+
