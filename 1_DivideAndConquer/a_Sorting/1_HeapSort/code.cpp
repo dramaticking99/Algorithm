@@ -5,8 +5,8 @@
 #include<algorithm>
 using namespace std;
 
-//Task today is to define a MaxHeap in the class Itself.
-// and change the functions in such a way that they make changes to the maxHeap defined in the class
+//Solve The bug during heapSort 
+//the bug is because the heapSort won't work with the heap vector using the vector.size() function.
 // Also create a class that implements the heap with recurrsion
 
 class MaxHeap {
@@ -14,14 +14,8 @@ class MaxHeap {
 private:
 
     vector<int>heap;
-    
-public:    
-    
-    MaxHeap(vector<int>heapVector) {
-        this->heap = heapVector;
-    }
-    
-    void heapifyUp () {
+
+        void heapifyUp () {
         int index = heap.size();
         int parentIndex = index/2;
 
@@ -32,7 +26,7 @@ public:
         }
     }
 
-    void heapifyDown () {
+        void heapifyDown () {
         int index = 1;
         int size = heap.size();
         int leftChild = index*2 > size ? -1 : index*2;
@@ -66,11 +60,18 @@ public:
                    greaterChild = leftChild;
                 }
         }
+        heap.pop_back();
     }
-
+    
+public:    
+    
+    MaxHeap(vector<int>heapVector) {
+        this->heap = heapVector;
+    }
+    
     void insertItem (int item) {
-        heap[heap.size()] = item;
-        heapifyUp();
+        heap.push_back(item);
+        heapifyUp();        
     }
 
     int deleteItem () {
@@ -112,7 +113,7 @@ public:
 
     void printHeap() {
         cout<<"the elements in the heap are as follows : ";
-        for(int i = 0; i < heap.size(); i++){
+        for(int i = 0; i < heap.size() ; i++){
             cout<<heap[i]<<" ";
         }
         cout<<endl;
@@ -121,15 +122,17 @@ public:
 
 int main() {
 
-    vector<int>arr = {6,3,4,1,10};
+    vector<int>arr = {15,10,6,3,4,1};
 
-    MaxHeap::heapSort(arr);
+    MaxHeap* heapToTest =new  MaxHeap(arr);
 
-    cout<<"This should be the sorted array : ";
-    for(int i = 0; i < arr.size(); i++){
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
+    int deletedItem = heapToTest->deleteItem();
+
+    heapToTest->printHeap();
+
+    
+    
     
 }
+
 
