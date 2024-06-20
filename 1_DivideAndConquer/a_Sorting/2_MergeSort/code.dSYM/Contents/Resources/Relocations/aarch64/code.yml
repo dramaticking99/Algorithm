@@ -1,0 +1,19 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/chetansanwariya/Desktop/Algo/1_DivideAndConquer/a_Sorting/2_MergeSort/code'
+relocations:
+  - { offsetInCU: 0x102, offset: 0x102, size: 0x8, addend: 0x0, symName: __ZN9MergeSort5mergeEPiii, symObjAddr: 0x0, symBinAddr: 0x100003A68, symSize: 0x2BC }
+  - { offsetInCU: 0x3206, offset: 0x3206, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0xEAC0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x3575, offset: 0x3575, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x438, symBinAddr: 0x100003EEC, symSize: 0x0 }
+  - { offsetInCU: 0x358F, offset: 0x358F, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedImEE, symObjAddr: 0x439, symBinAddr: 0x100003EED, symSize: 0x0 }
+  - { offsetInCU: 0x35A9, offset: 0x35A9, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIyEE, symObjAddr: 0x43A, symBinAddr: 0x100003EEE, symSize: 0x0 }
+  - { offsetInCU: 0x35CF, offset: 0x35CF, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_code.cpp, symObjAddr: 0x410, symBinAddr: 0x100003E78, symSize: 0x14 }
+  - { offsetInCU: 0x35FB, offset: 0x35FB, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x3D4, symBinAddr: 0x100003E3C, symSize: 0x3C }
+  - { offsetInCU: 0x3603, offset: 0x3603, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_code.cpp, symObjAddr: 0x410, symBinAddr: 0x100003E78, symSize: 0x14 }
+  - { offsetInCU: 0x35F7, offset: 0x35F7, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x344, symBinAddr: 0x100003DAC, symSize: 0x90 }
+  - { offsetInCU: 0x35FF, offset: 0x35FF, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x3D4, symBinAddr: 0x100003E3C, symSize: 0x3C }
+  - { offsetInCU: 0x3660, offset: 0x3660, size: 0x8, addend: 0x0, symName: __ZN9MergeSort9mergeSortEPiii, symObjAddr: 0x2BC, symBinAddr: 0x100003D24, symSize: 0x88 }
+  - { offsetInCU: 0x3668, offset: 0x3668, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x344, symBinAddr: 0x100003DAC, symSize: 0x90 }
+  - { offsetInCU: 0x36CA, offset: 0x36CA, size: 0x8, addend: 0x0, symName: __ZN9MergeSort5mergeEPiii, symObjAddr: 0x0, symBinAddr: 0x100003A68, symSize: 0x2BC }
+  - { offsetInCU: 0x36D2, offset: 0x36D2, size: 0x8, addend: 0x0, symName: __ZN9MergeSort9mergeSortEPiii, symObjAddr: 0x2BC, symBinAddr: 0x100003D24, symSize: 0x88 }
+...
